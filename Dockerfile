@@ -12,4 +12,3 @@ WORKDIR /workdir
 COPY --from=builder /usr/local /usr/local
 
 ENTRYPOINT ["rubocop"]
-CMD ["--help"]
