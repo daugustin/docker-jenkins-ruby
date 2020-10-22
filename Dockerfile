@@ -1,7 +1,7 @@
 FROM ruby:alpine as builder
 
 RUN apk update
-RUN apk add --virtual build-dependencies build-base
+RUN apk add --virtual build-dependencies build-base openjdk8
 RUN gem install rubocop -v 1.0.0
 RUN find /usr/local/bundle/gems -name "*.c" -delete
 RUN find /usr/local/bundle/gems -name "*.o" -delete
