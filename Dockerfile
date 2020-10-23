@@ -4,6 +4,7 @@ RUN apk update
 RUN apk add --virtual build-dependencies build-base
 RUN gem install rubocop -v 1.0.0
 RUN gem install brakeman -v 4.10.0
+RUN gem install reek -v 6.0.2
 RUN find /usr/local/bundle
 RUN which rubocop
 RUN which brakeman
